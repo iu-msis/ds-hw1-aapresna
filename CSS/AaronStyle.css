@@ -1,0 +1,32 @@
+        body{
+              font-family: sans-serif;
+          }
+          
+          .header img{
+             float: left
+          }
+          
+          .header {
+              background-color: #083320;
+              color: white;
+              font-family: "Helvetica", sans-serif;
+          }
+          
+          nav{
+              border-bottom-style: solid;
+              margin-top: -15px;
+              padding-bottom: 5px;
+          }
+          
+          a{
+              color: darkgreen;
+              font-weight: bold;
+              text-decoration: none;
+          }
+          
+          footer{
+              background-color: #083320;
+              color: white;
+              font-weight: lighter;
+              padding: 5px;
+          }
