@@ -45,3 +45,8 @@
           dd {
             display:block;
           }
+
+          .thead-dark {
+            background-color: black;
+            color: lightgrey;
+          }
