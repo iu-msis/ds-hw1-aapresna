@@ -1,32 +1,47 @@
         body{
               font-family: sans-serif;
           }
-          
-          .header img{
-             float: left
-          }
-          
+
+
           .header {
-              background-color: #083320;
+              background-color: #00bfff;
               color: white;
               font-family: "Helvetica", sans-serif;
+              margin-top: -20px;
+              padding-bottom: 5px;
           }
-          
+
           nav{
               border-bottom-style: solid;
               margin-top: -15px;
               padding-bottom: 5px;
           }
-          
+
           a{
               color: darkgreen;
               font-weight: bold;
               text-decoration: none;
           }
-          
+
           footer{
-              background-color: #083320;
+              background-color: #00bfff;
               color: white;
               font-weight: lighter;
               padding: 5px;
+          }
+
+          .hyperlink{
+              color:#00bfff;
+          }
+
+          dt {
+            display:block; float:left; width:100px; text-align: left;
+          }
+
+          dt:after{
+            content:':';
+          }
+
+          dd {
+            display:block;
           }
