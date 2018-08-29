@@ -33,6 +33,31 @@
 
           }
 
+
+          * {
+              box-sizing: border-box;
+          }
+
+          .column {
+              float: left;
+              width: 33.33%;
+              padding: 5px;
+          }
+
+          /* Clearfix (clear floats) */
+          .row::after {
+              content: "";
+              clear: both;
+              display: table;
+          }
+
+          /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+          @media screen and (max-width: 500px) {
+              .column {
+                  width: 100%;
+              }
+          }
+
       </style>
 
   </head>
@@ -56,33 +81,20 @@
         </nav>
       <div class="content">
 
-        <h1>Welcome to my website</h1>
+        <h1 id="picturecolor">Pictures</h1>
 
-        <p style="font-size:120%;">This website is all about plane spotting.
-        Plane spotting is the art of locating and recording airplane information.
-      Many "plane spotters" are professional photographers who spend hours at airports
-    photographing airplanes. The most important part of plane spotting is to record
-  the airplane tail number. Every airplane has a unique tail number, similar to a car's
-license plate. Tail numbers can change depending on who owns the airplane. This is why
-tail numbers are similar to license plates and not VIN numbers.
-<br>
-<br>
-On this website, you'll find information about me, a table of my plane spottings, as well
-as pictures of airplanes that I have spotted. Enjoy!</p>
+        <div class="row">
+          <div class="column">
+            <a href="img/N77520.jpg" target="_blank"><img src="img/N77520.jpg" alt="N77520" class="img-thumbnail" style="width:100%"></a>
+          </div>
+          <div class="column">
+            <a href="img/N68077.jpg" target="_blank"><img src="img/N68077.jpg" alt="N68077" class="img-thumbnail" style="width:100%"></a>
+          </div>
+          <div class="column">
+            <a href="img/LX-UCV.jpg" target="_blank"><img src="img/LX-UCV.jpg" alt="LX-UCV" class="img-thumbnail" style="width:100%"></a>
+          </div>
+        </div>
 
-        <h3 class="under">About Me</h3>
-          <img src="img/Headshot.jpg" alt="Headshot" width="200px">
-        <br>
-        <br>
-
-        <dl>
-           <dt>Name</dt><dd>Aaron Presnal</dd>
-           <dt>Country</dt><dd>United States</dd>
-        <dt>Birthdate</dt><dd>July 4, 1776</dd>
-        <dt>Age</dt><dd>242</dd>
-        <dt>Email</dt><a href="mailto:aapresna@indiana.edu">aapresna@indiana.edu</a>
-
-          </dl>
 
 
 
