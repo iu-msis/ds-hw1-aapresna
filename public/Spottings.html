@@ -73,70 +73,70 @@
                 <td>N649RW</td>
                 <td>E170</td>
                 <td>United</td>
-                <td><span class="text-left">$ </span><span class="text-right">041,000,000</span></td>
+                <td>$41,000,000</td>
                 <td>01/17/2018</td>
               </tr>
               <tr>
                 <td>N813AW</td>
                 <td>A319</td>
                 <td>American</td>
-                <td><span class="text-left">$ </span><span class="text-right">089,600,000</span></td>
+                <td>$89,600,000</td>
                 <td>01/17/2018</td>
               </tr>
               <tr>
                 <td>N13202</td>
                 <td>E145</td>
                 <td>United</td>
-                <td><span class="text-left">$ </span><span class="text-right">017,900,000</span></td>
+                <td>$17,900,000</td>
                 <td>03/25/2018</td>
               </tr>
               <tr>
                 <td>N77520</td>
                 <td>737-800</td>
                 <td>United</td>
-                <td><span class="text-left">$ </span><span class="text-right">102,200,000</span></td>
+                <td>$102,200,000</td>
                 <td>06/01/2018</td>
               </tr>
               <tr>
                 <td>N745SW</td>
                 <td>737-700</td>
                 <td>Southwest</td>
-                <td><span class="text-left">$ </span><span class="text-right">085,800,000</span></td>
+                <td>$85,800,000</td>
                 <td>06/01/2018</td>
               </tr>
               <tr>
                 <td>N225NV</td>
                 <td>A320</td>
                 <td>Allegiant</td>
-                <td><span class="text-left">$ </span><span class="text-right">101,000,000</span></td>
+                <td>$101,000,000</td>
                 <td>06/01/2018</td>
               </tr>
               <tr>
                 <td>N810MD</td>
                 <td>E170</td>
                 <td>Delta</td>
-                <td><span class="text-left">$ </span><span class="text-right">041,000,000</span></td>
+                <td>$41,000,000</td>
                 <td>07/14/2018</td>
               </tr>
               <tr>
                 <td>N68077</td>
                 <td>767-300</td>
                 <td>FedEx</td>
-                <td><span class="text-left">$ </span><span class="text-right">199,300,000</span></td>
+                <td>$199,300,000</td>
                 <td>07/14/2018</td>
               </tr>
               <tr>
                 <td>N928EV</td>
                 <td>CRJ-200</td>
                 <td>American</td>
-                <td><span class="text-left">$ </span><span class="text-right">039,700,000</span></td>
+                <td>$39,700,000</td>
                 <td>08/05/2018</td>
               </tr>
               <tr>
                 <td>LX-UCV</td>
                 <td>747-400</td>
                 <td>Cargolux</td>
-                <td><span class="text-left">$ </span><span class="text-right">238,000,000</span></td>
+                <td>$238,000,000</td>
                 <td>08/05/2018</td>
               </tr>
             </tbody>
@@ -181,16 +181,6 @@
       <script src="js/tablesort.min.js"></script>
       <script src="js/tablesort.number.js"></script>
       <script>
-        // Tablesort plugin from http://tristen.ca/tablesort/demo/
-        Tablesort.extend('tshirt', function(item) {
-          // Regular expression to test against.
-          return /^X?S|M|X?L|2XL$/.test(item);
-        }, function(a, b) {
-          // Custom sort functionality goes here.
-          // e.g var n = (a > b) ? -1 : 1;
-          var sizes = ['XS', 'S', 'M', 'L', 'XL', '2XL'];
-          return sizes.indexOf(b) - sizes.indexOf(a);
-        });
         new Tablesort(document.getElementById('spottingstable'));
       </script>
 
