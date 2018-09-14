@@ -3,13 +3,20 @@
   <head>
   <title>Aaron's Plane Spotting - Home</title>
 
-      <link rel="stylesheet" href="css/AaronStyle.css">
 
-       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/AaronStyle.css">
 
-    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
 
 
       <style>
@@ -71,18 +78,6 @@ On this website, you'll find information about me, a table of my plane spottings
 as pictures of airplanes that I have spotted. Enjoy!</p>
 
         <h3 class="under">About Me</h3>
-          <img src="img/Headshot.jpg" alt="Headshot" width="200px">
-        <br>
-        <br>
-
-        <dl>
-           <dt>Name</dt><dd>Aaron Presnal</dd>
-           <dt>Country</dt><dd>United States</dd>
-        <dt>Birthdate</dt><dd>July 4, 1776</dd>
-        <dt>Age</dt><dd>242</dd>
-        <dt>Email</dt><a href="mailto:aapresna@indiana.edu">aapresna@indiana.edu</a>
-
-          </dl>
 
 
 
@@ -96,7 +91,14 @@ as pictures of airplanes that I have spotted. Enjoy!</p>
 
       </div>
 
+      <div id="random">
+          {{ results }}
+      </div>
 
+      <script src="js/random.app.js"></script>
+      <br>
+      <button @click="fetch(url)">Refresh Random User</button>
+      <br>
   </body>
 
 </html>
