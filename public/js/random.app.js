@@ -73,15 +73,22 @@ var randomApp = new Vue({
           console.log('TASK FETCH ERROR:');
           console.log(err);
         })
-      }
+      },
+      pretty_date: function (d) {
+      return moment(d).format('l')
+    }
+  },
+  created () {
+    this.refresh();
   }
+
 }
 );
-const url = 'https://randomuser.me/api/?inc=picture,name,nat,dob,email&noinfo';
-fetch(url)
-.then( response => response.json() )
-.then( json => {randomApp.results = json} )
-.catch( err => {
-  console.log('TASK FETCH ERROR:');
-  console.log(err);
-})
+// const url = 'https://randomuser.me/api/?inc=picture,name,nat,dob,email&noinfo';
+// fetch(url)
+// .then( response => response.json() )
+// .then( json => {randomApp.results = json} )
+// .catch( err => {
+//   console.log('TASK FETCH ERROR:');
+//   console.log(err);
+// })

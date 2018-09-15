@@ -91,12 +91,19 @@ as pictures of airplanes that I have spotted. Enjoy!</p>
 
       </div>
 
-      <div id="random">
+      <div class="content" id="random">
         <p>
           {{ results }}
         </p>
+        <br>
+        <p>
+          Age:&nbsp;{{results.date}} <!- SHOULD BE {{RESULTS.DOB.DATE}} BUT GIVES WHITE SCREEN ->
+        </p>
+        <br>
           <button v-on:click="refresh">Refresh User Data</button>
       </div>
+
+
       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
       <script src="js/random.app.js"></script>
 
