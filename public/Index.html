@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Aaron's Plane Spotting - Home</title>
+  <title>Aaron's Plane Spotting</title>
 
 
     <link rel="stylesheet" href="css/AaronStyle.css">
@@ -93,11 +93,11 @@ as pictures of airplanes that I have spotted. Enjoy!</p>
 
       <div class="content" id="random">
         <p>
-          {{ results }}
+          {{ person }}
         </p>
         <br>
         <p>
-          Age:&nbsp;{{results.date}} <!- SHOULD BE {{RESULTS.DOB.DATE}} BUT GIVES WHITE SCREEN ->
+          Age:&nbsp;{{person.date}} <!- SHOULD BE {{RESULTS.DOB.DATE}} BUT GIVES WHITE SCREEN ->
         </p>
         <br>
           <button v-on:click="refresh">Refresh User Data</button>

@@ -1,7 +1,7 @@
 var randomApp = new Vue({
   el: '#random',
   data: {
-      results:  [
+      person:
         {
           gender: '',
           name: {
@@ -54,7 +54,7 @@ var randomApp = new Vue({
           },
           nat: ''
         }
-      ],
+      ,
       info: {
         seed: '',
         results: 0,
@@ -68,7 +68,7 @@ var randomApp = new Vue({
         const url = 'https://randomuser.me/api/?inc=picture,name,nat,dob,email&noinfo';
         fetch(url)
         .then( response => response.json() )
-        .then( json => {randomApp.results = json} )
+        .then( json => {randomApp.person = json.results[0]} )
         .catch( err => {
           console.log('TASK FETCH ERROR:');
           console.log(err);
