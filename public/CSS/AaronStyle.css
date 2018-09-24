@@ -88,3 +88,7 @@
           	visibility: visible;
           	opacity: 1;
           }
+
+          #namecap {
+            text-transform: capitalize;
+          };

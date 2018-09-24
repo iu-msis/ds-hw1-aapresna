@@ -92,12 +92,17 @@ as pictures of airplanes that I have spotted. Enjoy!</p>
       </div>
 
       <div class="content" id="random">
-        <p>
-          {{ person }}
+        <p id="namecap">
+          Name:&nbsp;{{ person.name.title }}&nbsp;{{ person.name.first }}&nbsp;{{ person.name.last }}
         </p>
-        <br>
         <p>
-          Age:&nbsp;{{person.date}} <!- SHOULD BE {{RESULTS.DOB.DATE}} BUT GIVES WHITE SCREEN ->
+          Email:&nbsp;{{ person.email }}
+        </p>
+        <p>
+          Nationality:&nbsp;{{ person.nat }}
+        </p>
+        <p>
+          Age:&nbsp;{{ person.dob.age }}
         </p>
         <br>
           <button v-on:click="refresh">Refresh User Data</button>
