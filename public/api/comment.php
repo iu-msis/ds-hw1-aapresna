@@ -2,6 +2,11 @@
 
 require '../../app/common.php';
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  require 'workPost.php';
+  exit;
+}
+
 $id = intval($_GET['id'] ?? 0);
 
 if ($id < 1) {
