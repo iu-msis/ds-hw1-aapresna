@@ -9,7 +9,7 @@ class Work
     $this->comment = $row['comment'];
   }
 
-  public static function getWorkById(int $Id) {
+  public static function getWorkById(int $id) {
     // 1. Connect to the database
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
     // 2. Prepare the query
@@ -17,7 +17,7 @@ class Work
     $statement = $db->prepare($sql);
     // 3. Run the query
     $success = $statement->execute(
-        [$Id]
+        [$id]
     );
     // 4. Handle the results
     $arr = [];
