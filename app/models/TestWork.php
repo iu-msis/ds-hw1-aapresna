@@ -40,7 +40,7 @@ class TestWork
     $success = $statement->execute([
       $this->task_id,
       $this->team_id,
-      $this->start_date,
+      $this->start,
       $this->hours,
       $this->completion_estimate
     ]);
