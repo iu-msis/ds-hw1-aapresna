@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $id = intval($_GET['id'] ?? 0);
 
-if ($id < 1) {
+if ($id < 0) {
   throw new Exception('Invalid ID');
 }
 
