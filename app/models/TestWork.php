@@ -8,8 +8,10 @@ class TestWork
   public $stop;   //'YYYY-MM-DD', needs to be calculated
   public $hours;
   public $completion_estimate;
+
   public function __construct($row) {
-    $this->id = intval($row['id']);
+    $this->id = isset($row['id']) ? intval($row['id']) : null;
+
     $this->task_id = intval($row['task_id']);
     $this->team_id = intval($row['team_id']);
     $this->start = $row['start_date'];
