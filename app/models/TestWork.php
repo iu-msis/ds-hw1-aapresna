@@ -14,17 +14,40 @@ class TestWork
 
     $this->task_id = intval($row['task_id']);
     $this->team_id = intval($row['team_id']);
+
     $this->start = $row['start_date'];
     $this->hours = floatval($row['hours']);
+
     // Calculate stop date
     $hours = floor($this->hours);
     $mins = intval(($this->hours - $hours) * 60); // Take advantage of one decimal place
     $interval = 'PT'. ($hours ? $hours.'H' : '') . ($mins ? $mins.'M' : '');
+
     $date = new DateTime($this->start);
     $date->add(new DateInterval($interval));
     $this->stop = $date->format('Y-m-d H:i:s');
+
     $this->completion_estimate = intval($row['completion_estimate']);
   }
+
+  public function create() {
+    $db = new PDO(DB_SERVER, DB_USER, DB_PW);
+
+    $sql = 'INSERT Work (task_id, team_id, start_date, hours, completion_estimate)
+            VALUES (?, ?, ?, ?, ?)';
+
+    $statement = $db->prepare($sql);
+    $success = $statement->execute([
+      $this->task_id,
+      $this->team_id,
+      $this->start_date,
+      $this->hours,
+      $this->completion_estimate
+    ]);
+
+    $this->id = $db->lastInsertID();
+  }
+
   public static function getWorkByTaskId(int $taskId) {
     // 1. Connect to the database
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
