@@ -1,4 +1,5 @@
 <?php
+use PDO;
 class TestWork
 {
   public $id;
