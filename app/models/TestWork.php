@@ -31,7 +31,7 @@ class TestWork
   }
 
   public function create() {
-    $db = new PDO(DB_USER, DB_PW, DB_SERVER);
+    $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 
     $sql = 'INSERT Work (task_id, team_id, start_date, hours, completion_estimate)
             VALUES (?, ?, ?, ?, ?)';
