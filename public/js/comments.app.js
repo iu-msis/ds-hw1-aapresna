@@ -18,7 +18,7 @@ var commentsApp = new Vue({
       console.log(s);
 
       // POST to remote server
-      fetch('api/comment.php', {
+      fetch('http://ec2-34-226-150-61.compute-1.amazonaws.com/api/comment.php', {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         headers: {
             "Content-Type": "application/json; charset=utf-8"
@@ -46,7 +46,7 @@ var commentsApp = new Vue({
   created () {
 
     // Do data fetch
-    const url = new URL("http://ec2-34-226-150-61.compute-1.amazonaws.com/api/comment.php");
+    const url = new URL('http://ec2-34-226-150-61.compute-1.amazonaws.com/api/comment.php');
     console.log(url);
 
     // Populate workForm with default values
@@ -54,7 +54,7 @@ var commentsApp = new Vue({
 
     // TODO: Fetch task-specific data
     // fetch('api/task?id=4')
-    fetch('api/comment.php')
+    fetch('http://ec2-34-226-150-61.compute-1.amazonaws.com/api/comment.php')
     .then( response => response.json() )
     .then( json => {commentsApp.work = json} )
     .catch( err => {
