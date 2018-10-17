@@ -46,7 +46,7 @@ var commentsApp = new Vue({
   created () {
 
     // Do data fetch
-    const url = new URL("http://ec2-34-226-150-61.compute-1.amazonaws.com/");
+    const url = new URL("http://ec2-34-226-150-61.compute-1.amazonaws.com/api/comment.php");
     console.log(url);
 
     // Populate workForm with default values
