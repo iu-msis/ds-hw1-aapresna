@@ -44,7 +44,7 @@ var tasksApp = new Vue({
       console.log(s);
 
       // POST to remote server
-      fetch('api/work.php', {
+      fetch('api/comment.php', {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         headers: {
             "Content-Type": "application/json; charset=utf-8"
