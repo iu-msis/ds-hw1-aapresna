@@ -10,7 +10,7 @@ var commentsApp = new Vue({
     },
 
   methods: {
-    handleWorkForm(e) {
+    handleCommentForm(e) {
 
       // POST to remote server
       fetch('api/comment.php', {
@@ -29,7 +29,7 @@ var commentsApp = new Vue({
       })
 
       // Reset workForm
-      this.newcommentForm = this.getEmptyWorkForm();
+      this.newcommentForm = this.getEmptyCommentForm();
     },
 
     getAllComments() {
@@ -52,7 +52,7 @@ var commentsApp = new Vue({
   created () {
 
 this.getAllComments();
-this.newCommentForm = this.getEmptyWorkForm();
+this.newCommentForm = this.getEmptyCommentForm();
 
   }
 })

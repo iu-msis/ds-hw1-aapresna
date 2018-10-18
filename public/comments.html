@@ -89,8 +89,6 @@
           </div>
       </nav>
 
-      <div class="content">
-
         <h1>Comments</h1>
 
         <div id="commentsMain">
@@ -116,7 +114,7 @@
              <hr>
                <h3>Add Comments</h3>
 
-               <form @submit.prevent="handleWorkForm" id="newCommentForm">
+               <form @submit.prevent="handleCommentForm" id="newCommentForm">
                  <div class="form-group row">
                    <label for="comment" class="col-sm-1 col-form-label">Comment: </label>
                    <div class="form-group col-lg-4">
@@ -128,7 +126,7 @@
                  <button type="submit" class="btn btn-primary" id="submitNewComment">Save changes</button>
                </form>
 
-             </div>
+
 
 
 
