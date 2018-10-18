@@ -29,7 +29,7 @@ var commentsApp = new Vue({
       })
 
       // Reset workForm
-      this.newCommentsForm = this.getEmptyCommentForm();
+      this.newCommentsForm = this.getEmptyCommentsForm();
     },
 
     getAllComments() {
@@ -42,7 +42,7 @@ var commentsApp = new Vue({
       })
     },
 
-    getEmptyCommentForm() {
+    getEmptyCommentsForm() {
       return {
         comment: null,
       }
@@ -52,7 +52,7 @@ var commentsApp = new Vue({
   created () {
 
 this.getAllComments();
-this.newCommentsForm = this.getEmptyCommentForm();
+this.newCommentsForm = this.getEmptyCommentsForm();
 
   }
 })
