@@ -90,7 +90,6 @@
       </nav>
 
         <h1>Comments</h1>
-        <h2>Hello</h2>
         <main id="commentsMain">
 
 
@@ -102,7 +101,7 @@
                  </tr>
                </thead>
                <tbody id="commentTableBody">
-                 <tr v-for="c in comment">
+                 <tr v-for="c in comments">
 
                  <td>{{ c.id }}</td>
                  <td>{{ c.comment }}</td>
@@ -114,11 +113,11 @@
              <hr>
                <h3>Add Comments</h3>
 
-               <form @submit.prevent="handleCommentForm" id="newCommentForm">
+               <form @submit.prevent="handleCommentForm" id="newCommentsForm">
                  <div class="form-group row">
                    <label for="comment" class="col-sm-1 col-form-label">Comment: </label>
                    <div class="form-group col-lg-4">
-                     <input type="text" id="comment" v-model="newCommentForm.comment" class="form-control" required>
+                     <input type="text" id="comment" v-model="newCommentsForm.comment" class="form-control" required>
                    </div>
                  </div>
 

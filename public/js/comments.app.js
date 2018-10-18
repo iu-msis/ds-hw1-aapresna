@@ -3,10 +3,10 @@ var commentsApp = new Vue({
   data: {
       comment: {
         id:0,
-        comments:''
+        comment:''
       },
       commentArr: [],
-      newCommentsForm: { }
+      newCommentForm: { }
     },
 
   methods: {
