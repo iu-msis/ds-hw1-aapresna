@@ -11,6 +11,7 @@ var commentsApp = new Vue({
 
   methods: {
     handleCommentForm(e) {
+      const s = JSON.stringify(this.newCommentsForm) // body data type must match "Content-Type" header
 
       // POST to remote server
       fetch('api/comment.php', {
@@ -18,8 +19,7 @@ var commentsApp = new Vue({
         headers: {
             "Content-Type": "application/json; charset=utf-8"
         },
-        body: JSON.stringify(
-          {comment:this.newCommentsForm}) // body data type must match "Content-Type" header
+        body: s // body data type must match "Content-Type" header
       })
       .then( response => response.json() )
       .then( json => {this.commentArr.push(json)})
