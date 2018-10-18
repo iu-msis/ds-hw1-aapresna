@@ -29,7 +29,7 @@ var commentsApp = new Vue({
       })
 
       // Reset workForm
-      this.newcommentForm = this.getEmptyCommentForm();
+      this.newCommentsForm = this.getEmptyCommentForm();
     },
 
     getAllComments() {
