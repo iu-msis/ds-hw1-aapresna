@@ -1,12 +1,12 @@
 var commentsApp = new Vue({
   el: '#commentsMain',
   data: {
-      comment:{
+      comment: {
         id:0,
         comment:''
       },
       commentArr: [],
-      newCommentForm: {}
+      newCommentForm: { }
     },
 
   methods: {
