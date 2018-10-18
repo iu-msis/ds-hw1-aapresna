@@ -1,12 +1,12 @@
 var commentsApp = new Vue({
   el: '#commentsMain',
   data: {
-      comment: {
+      comments: {
         id:0,
         comment:''
       },
       commentArr: [],
-      newCommentForm: { }
+      newCommentsForm: { }
     },
 
   methods: {
@@ -19,7 +19,7 @@ var commentsApp = new Vue({
             "Content-Type": "application/json; charset=utf-8"
         },
         body: JSON.stringify(
-          {comment:this.newCommentForm}) // body data type must match "Content-Type" header
+          {comment:this.newCommentsForm}) // body data type must match "Content-Type" header
       })
       .then( response => response.json() )
       .then( json => {this.commentArr.push(json)})
@@ -52,7 +52,7 @@ var commentsApp = new Vue({
   created () {
 
 this.getAllComments();
-this.newCommentForm = this.getEmptyCommentForm();
+this.newCommentsForm = this.getEmptyCommentForm();
 
   }
 })
