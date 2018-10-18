@@ -3,7 +3,6 @@
   <head>
   <title>Aaron's Plane Spotting - Comments</title>
 
-      <link rel="shortcut icon" href="#" />
 
       <link rel="stylesheet" href="CSS/AaronStyle.css">
 
@@ -94,17 +93,22 @@
 
         <h1>Comments</h1>
 
+        <div id="commentsMain">
+
+
             <table class="table table-striped table-sm" id="commentTable">
                <thead>
                  <tr>
                    <th>id</th>
                    <th>comment</th>
-
                  </tr>
                </thead>
-               <tbody v-for="w in work" id="commentTableBody">
-                 <td>{{w.id}}</td>
-                 <td>{{w.comment}}</td>
+               <tbody id="commentTableBody">
+                 <tr v-for="c in comment">
+
+                 <td>{{ c.id }}</td>
+                 <td>{{ c.comment }}</td>
+               </tr>
                </tbody>
              </table>
 
@@ -116,7 +120,7 @@
                  <div class="form-group row">
                    <label for="comment" class="col-sm-1 col-form-label">Comment: </label>
                    <div class="form-group col-lg-4">
-                     <input type="text" id="comment" v-model="workForm.comment" class="form-control" required>
+                     <input type="text" id="comment" v-model="newCommentForm.comment" class="form-control" required>
                    </div>
                  </div>
 
@@ -124,7 +128,7 @@
                  <button type="submit" class="btn btn-primary" id="submitNewComment">Save changes</button>
                </form>
 
-
+             </div>
 
 
 
