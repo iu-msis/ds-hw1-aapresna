@@ -1,7 +1,11 @@
 var commentsApp = new Vue({
   el: '#commentsMain',
   data: {
-      comment: [],
+      comment:{
+        id:0,
+        comment:''
+      },
+      commentArr: [],
       newCommentForm: {}
     },
 
@@ -15,24 +19,23 @@ var commentsApp = new Vue({
             "Content-Type": "application/json; charset=utf-8"
         },
         body: JSON.stringify(
-          {comment:this.newCommentForm.comment}) // body data type must match "Content-Type" header
+          {comment:this.newCommentForm}) // body data type must match "Content-Type" header
       })
       .then( response => response.json() )
-      .then( json => {this.comment.push(json)})
+      .then( json => {this.commentArr.push(json)})
       .catch( err => {
         console.error('WORK POST ERROR:');
         console.error(err);
       })
 
       // Reset workForm
-      // this.workForm = this.getEmptyWorkForm();
+      this.newcommentForm = this.getEmptyWorkForm();
     },
 
-
-    getAllComments: function() {
+    getAllComments() {
       fetch('api/comment.php')
       .then(response => response.json())
-      .then(json => {commentsApp.comment = json;})
+      .then(json => {commentsApp.commentArr = json;})
       .catch( err => {
         console.error('FETCH ERROR:');
         console.error(err);
