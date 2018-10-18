@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Aaron's Plane Spotting - Comments</title>
+
+
+      <link rel="stylesheet" href="CSS/AaronStyle.css">
+
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+      <style>
+
+          h1{
+              padding-bottom: 5px;
+          }
+          .under{
+              text-decoration: underline;
+          }
+          .content{
+              margin: 10px;
+          }
+
+          .nav{
+              margin-left: 10px;
+          }
+
+          body{
+              font-family: sans-serif;
+
+          }
+
+
+          * {
+              box-sizing: border-box;
+          }
+
+          .column {
+              float: left;
+              width: 33.33%;
+              padding: 5px;
+          }
+
+          /* Clearfix (clear floats) */
+          .row::after {
+              content: "";
+              clear: both;
+              display: table;
+          }
+
+          /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+          @media screen and (max-width: 500px) {
+              .column {
+                  width: 100%;
+              }
+          }
+
+      </style>
+
+  </head>
+  <body>
+      <header>
+          <div class="header">
+          <img src="img/cartoon-airplane.png" alt="Airplane Logo" width="200px" hspace="10">
+          <p style="font-size:300%;">&ensp;Aaron's Plane Spotting</p>
+          </div>
+      </header>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="Index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Spottings.html">Spottings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Pictures.html">Pictures</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="comments.html">Comments</a>
+              </li>
+            </ul>
+          </div>
+      </nav>
+
+        <h1>Comments</h1>
+        <main id="commentsMain">
+            <table id="commentTable">
+               <thead>
+                 <tr>
+                   <th>id</th>
+                   <th>comment</th>
+                 </tr>
+               </thead>
+               <tbody id="commentTableBody" v-for="c in comments">
+
+                 <td>{{ c.id }}</td>
+                 <td>{{ c.comment }}</td>
+               </tbody>
+             </table>
+
+
+             <hr>
+               <h3>Add Comments</h3>
+
+               <form @submit.prevent="handleCommentForm" id="newCommentsForm">
+                 <div class="form-group row">
+                   <label for="start" class="col-sm-1 col-form-label">Comment: </label>
+                   <div class="form-group col-lg-4">
+                     <input type="text" id="comment" v-model="newCommentsForm.comment" class="form-control" required>
+                   </div>
+                 </div>
+
+                 <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                 <button type="submit" class="btn btn-primary" id="submitNewComment">Save changes</button>
+               </form>
+
+
+
+
+
+
+
+
+
+      <!- STUFF GOES HERE. THIS IS THE MAIN BODY OF THE WEBSITE. ->
+
+
+
+
+
+    </main>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script src="js/comments.app.js"></script>
+
+  </body>
+
+</html>
