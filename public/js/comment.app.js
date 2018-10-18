@@ -42,7 +42,7 @@ var commentsApp = new Vue({
       })
     },
 
-    getEmptyWorkForm() {
+    getEmptyCommentForm() {
       return {
         comment: null,
       }
